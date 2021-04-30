@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="темный.css">                                       <!--светлый и темный фон-->
+   	<link rel="stylesheet" type="text/css" href="светлый.css" id="theme-link">
+
+     <style>
+      img {
+      max-width: 100%;
+      height: auto;
+  }
+  </style>
+
+     <style>                                                                                          /*css slide*/  
+body {
+    font-family: Arial;
+    margin: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  img {
+    vertical-align: middle;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  </style>                                                                                     <!--css slide-->
+    <title>Komiakov</title>
+</head>
+<body>
+
+    <div class="wrapper">                                                                                    <!--кнопка для темы-->
+        <p><input type="button" class="theme-button" id="theme-button" value="Изменение темы"></p>
+    </div>  
+
+    <script>                                                                                            //JS тема
+        var btn = document.getElementById("theme-button"); 
+            var link = document.getElementById("theme-link");
+            
+            btn.addEventListener("click", function () { ChangeTheme(); });
+            
+            function ChangeTheme()
+            {
+                let lightTheme = "светлый.css";
+                let darkTheme = "темный.css";
+            
+                var currTheme = link.getAttribute("href");
+                var theme = "";
+            
+                if(currTheme == lightTheme)
+                {
+                    currTheme = darkTheme;
+                    theme = "dark";
+                }
+                else
+                {    
+                    currTheme = lightTheme;
+                    theme = "light";
+                }
+            
+                link.setAttribute("href", currTheme);
+            
+                Save(theme);
+            }                                                                                   //JS тема
+            </script>   
+
+    <table width="100%">
+      <tr>
+        <th></th>
+        <th>
+          <h1><p align ="center"><u><font face="COMIC SANS MS">Моя личная страница</font></u></align></h1>
+        </th>
+        <th>
+          <p align="right"><a href= "mailto: bitwidoc@gmail.com"></a><img src="kisspng-google-logo-computer-icons-mei-qi-5b19042809dd50.8354117915283661200404.jpg" width="40" height="35"></a></p></th>
+        </th>
+      </tr>
+    </table>
+    
+    <h2><p align="center"><u><font face="COMIC SANS MS">Таблица со списком предметов</font></u></p></h2>
+
+    <table border="4" cellspacing="3">
+        <tr>
+            <th>
+                1.
+            </th>
+            <th>
+                Архітектура обчислювальних систем
+            </th>
+            <th>
+                Ломакін
+            </th>
+            <th>
+                93
+            </th>
+        </tr>
+        <tr>
+            <th>
+                2.
+            </th>
+            <th>
+                Дискретна математика
+            </th>
+            <th>
+                Татарінова
+            </th>
+            <th>
+                70
+            </th>
+        </tr>
+        <tr>
+            <th>
+                3.
+            </th>
+            <th>
+                Диференційні рівняння 
+            </th>
+            <th>
+                Міхлін
+            </th>
+            <th>
+                60
+            </th>
+        </tr>
+        <tr>
+            <th>
+                4.
+            </th>
+            <th>
+                Нарисна геометрія та комп'ютерна графіка
+            </th>
+            <th>
+                Федченко
+            </th>
+            <th>
+                61
+            </th>
+        </tr>
+        <tr>
+            <th>
+                5.
+            </th>
+            <th>
+                Об'єктно-орієнтоване програмування
+            </th>
+            <th>
+                Водка
+            </th>
+            <th>
+                67
+            </th>
+        </tr>
+        <tr>
+            <th>
+                6.
+            </th>
+            <th>
+                Іноземна мова
+            </th>
+            <th>
+                Вракіна
+            </th>
+            <th>
+                75
+            </th>
+        </tr>
+        <tr>
+            <th>
+                7.
+            </th>
+            <th>
+                Правознавство
+            </th>
+            <th>
+                Кузьменко
+            </th>
+            <th>
+                90
+            </th>
+        </tr>
+        <tr>
+            <th>
+                8.
+            </th>
+            <th>
+                Фізичне виховання
+            </th>
+            <th>
+                Ширяєва
+            </th>
+            <th>
+                69
+            </th>
+        </tr>
+    </table>
+    
+        <h2><p align="center"><u><font face="COMIC SANS MS">5 любимых фильмов</font></u></p></h2>
+
+    <table width="100%">
+        <tr>
+         <th><a href="https://www.kinopoisk.ru/film/1043758/"><img src="parasite.jpg" width="200" height="250"></a></th>
+         <th></th>
+         <th><a href="https://kinogo.biz/34221-brat.html"></a><img src="brother.jpg" width="200" height="250"></th>
+         <th></th>
+         <th><a href="https://rezka.ag/films/drama/825-zelenaya-milya-1999.html"><img src="greenmile.jpeg" width="200" height="250"></a></th>
+        </tr>
+        <tr>
+          <th></th>
+          <th><a href="https://kinogo.biz/24329-zhizn-pi.html"></a><img src="lifepi.jpg" width="200" height="250"></th>
+          <th></th>
+          <th><a href="https://kinogo.biz/33538-brat-2.html"><img src="brother2.jpeg" width="200" height="250"></a></th>
+          <th></th>
+        </tr>
+    </table>
+
+        <h2><p align="center"><u><font face="COMIC SANS MS">3 слова, которыми можно меня описать</font></u></p></h2>
+
+            <h3><p align="right"><font color="#FF00FF">Я</font></p><p align="right" ><font color="#FF00FF">УМЕЮ</font></p><p align="right"><font color="#FF00FF">РИСОВАТЬ</font></p></h3>
+        
+            <h2><p align="center"><u><font face="COMIC SANS MS">3 вида настроения</font></u></p></h2>
+
+        <table width="100%">
+            <tr>
+                <th align="center">Счастливое</th>      
+            </tr> 
+            <tr>          
+                <th align="center"><img width="200px" height="200px" src="1a532ff4deec036dc66bcd773b1d2e00.jpg"></th>     
+            </tr>
+            <tr>
+              <th align="center">Грустное</th>
+            </tr>
+            <tr>
+              <th align="center"><img width="200px" height="200px" src="6853219_preview.png"></th>
+            </tr>
+            
+            <tr>
+              <th align="center">В текущий момент</th>
+            </tr>
+            <tr>
+              <th align="center"><img width="200px" height="200px" src="85b31bb02c891a62a1155eb954091d0a.jpg"></th>
+            </tr>
+        </table>
+
+        <h2><p align="center"><u><font face="COMIC SANS MS">Цитата</font></u></p></h2>
+
+        <p>Пон Джун-хо: <p>
+          <p><font face="Arial"><q>Знаешь, какой план никогда не провалится? Тот план, которого нет.</q></font></p>
+
+            <h2><p align="center"><u><font face="COMIC SANS MS">Место жительства</font></u></p></h2>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10254.411728832341!2d36.3299845914449!3d50.01879712068848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x412709df1a2eeea7%3A0x8cdbf3f1f6fcae6!2zNTIxLdC5INC80LjQutGA0L7RgNCw0LnQvtC9LCDQpdCw0YDRjNC60L7Qsiwg0KXQsNGA0YzQutC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNjEwMDA!5e0!3m2!1sru!2sua!4v1619477177439!5m2!1sru!2sua" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    
+
+            <h2><p align="center"><u><font face="COMIC SANS MS">Слайд-шоу</font></u></p></h2>
+
+            <div class="container">                                                            <!--slide html-->
+                <div class="mySlides">
+                  <div class="numbertext">1 / 6</div>
+                  <p align="center"><img src="sl1.jpg" width="200px" height="200px" style="width:20%"></p>
+                </div>
+              
+                <div class="mySlides">
+                  <div class="numbertext">2 / 6</div>
+                  <p align="center"><img src="sl2.png" width="200px" height="300px" style="width:20%"></p>
+                </div>
+              
+                <div class="mySlides">
+                  <div class="numbertext">3 / 6</div>
+                  <p align="center"><img src="sl3.jpeg" width="200px" height="200px" style="width:20%"></p>
+                </div>
+                  
+                <div class="mySlides">
+                  <div class="numbertext">4 / 6</div>
+                  <p align="center"><img src="sl4.jpg" width="200px" height="200px" style="width:20%"></p>
+                </div>
+              
+                <div class="mySlides">
+                  <div class="numbertext">5 / 6</div>
+                  <p align="center"><img src="sl5.jpg" width="200px" height="200px" style="width:20%"></p>
+                </div>
+                  
+                <div class="mySlides">
+                  <div class="numbertext">6 / 6</div>
+                  <p align="center"><img src="sl6.jpeg" width="200px" height="200px" style="width:20%"></p>
+                </div>
+                  
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+              
+                <div class="caption-container">
+                  <p id="caption"></p>
+                </div>
+              
+                <div class="row">
+                  <div class="column">
+                    <img class="demo cursor" src="sl1.jpg" style="width:100%" onclick="currentSlide(1)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="sl2.png" style="width:100%" onclick="currentSlide(2)">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="sl3.jpeg" style="width:100%" onclick="currentSlide(3)">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="sl4.jpg" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="sl5.jpg" style="width:100%" onclick="currentSlide(5)">
+                  </div>    
+                  <div class="column">
+                    <img class="demo cursor" src="sl6.jpeg" style="width:100%" onclick="currentSlide(6)">
+                  </div>
+                </div>
+              </div>                                                                           
+              
+              <script>                                                                                //slide JS
+              var slideIndex = 1;
+              showSlides(slideIndex);
+              
+              function plusSlides(n) {
+                showSlides(slideIndex += n);
+              }
+              
+              function currentSlide(n) {
+                showSlides(slideIndex = n);
+              }
+              
+              function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                var captionText = document.getElementById("caption");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                captionText.innerHTML = dots[slideIndex-1].alt;
+              }
+              </script>
+
+            <script>                                                                               
+                var slideIndex = 1;                                           //JS тема
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }                                                                                
+            </script>    
+            
+                 <h2 align="center"><u><font face="COMIC SANS MS">3D-figure</font></u></h2>
+
+            <div class="sketchfab-embed-wrapper"> <iframe title="Musashi" width="60%" height="300" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/dafaa42a09c14a179ad79233356bae03/embed">
+             </iframe>
+                  </div>
+    
+        </body>
+    </html>
+    
